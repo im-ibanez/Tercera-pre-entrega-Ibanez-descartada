@@ -5,5 +5,6 @@
 {% endblock TITULO %}
 
 {% block CONTENIDO %}
-    
+<a href="{% url 'expediente:index' %}", style="color: blue;">Ver expediente</a>
+<a href="{% url 'expediente:crear' %}", style="color: green;">Crear expediente</a>
 {% endblock CONTENIDO %}

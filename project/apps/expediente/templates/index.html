@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block TITULO %}
+    Expedientes
+{% endblock TITULO %}
+
+{% block CONTENIDO %}
+{% for expediente in expediente %}
+<h2>{{ expediente.numero_expediente }}</h2>
+<p>{{ expediente.anio }}</p>
+<p>{{ expediente.caratula }}</p>
+<p>{{ expediente.Juzgado }}</p>
+{% endfor %}
+
+<a href="{% url 'expediente:crear' %}", style="color: green;">Crear expediente</a>
+ 
+     <br>
+<a href="{% url 'index' %}"> Ir a menú principal</a>
+
+
+{% endblock CONTENIDO %}
